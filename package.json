@@ -1,0 +1,22 @@
+{
+  "name": "myguate.net",
+  "version": "1.0.0",
+  "description": "Clínica Pediátrica Nuestra Señora de Fátima",
+  "scripts": {
+    "jekyll": "jekyll build",
+    "build:css": "postcss assets/css_source/*.css -d _site/assets/css/",
+    "build:js": "for f in _site/assets/js/*.js; do terser \"$f\" -c -m -o \"$f\"; done",
+    "serve": "jekyll serve"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^6.1.2",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-discard-duplicates": "^6.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "terser": "^5.31.0"
+  }
+}

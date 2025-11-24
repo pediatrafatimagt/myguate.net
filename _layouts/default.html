@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+{% include head.html %}
+</head>
+<body>
+  
+    <header>
+        {% include header.html %}
+    </header> 
+    
+    <main class="content">
+        {{ content }} 
+    </main>
+<!---->
+    <footer class="site-footer section-padding">
+        {% include footer.html %}
+    </footer>
+
+
+
+
+    <!-- JAVASCRIPT FILES -->
+
+ {% if page.load_lactichart_js %}
+  <script src="/assets/js/chart.js"></script>
+{% endif %}
+
+{% if page.load_lactichart_js %}
+  <script src="/assets/js/lactichart.js"></script>
+{% endif %}
+
+
+
+         <!-- JAVASCRIPT FILES -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/jquery.sticky.js"></script>
+
+<script src="/assets/js/custom.js"></script>
+
+
+
+
+</body>
+
+</html>

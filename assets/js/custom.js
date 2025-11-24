@@ -1,0 +1,1 @@
+!function(t){"use strict";t(".navbar-collapse a").on("click",function(){t(".navbar-collapse").collapse("hide")}),t(".smoothscroll").click(function(){var e,n,o=t(this).attr("href"),a=t(o),l=t(".navbar").height();return e=l,n=a.offset().top-e,t("body,html").animate({scrollTop:n},300),!1})}(window.jQuery),document.getElementById("current-year").textContent=(new Date).getFullYear();

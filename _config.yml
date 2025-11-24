@@ -1,0 +1,74 @@
+# -----------------------------------------------
+# Site settings
+# -----------------------------------------------
+
+title: myguate.net
+email: info@myguate.net
+description: >-
+  Clinica Pediatrica
+
+# Use absolute URL and HTTPS when deploying for SEO and best practices.
+# Set this to your live domain (e.g., https://www.myguate.net)
+url: "https://myguate.net" 
+baseurl: "" 
+
+twitter_username: clinicafatima
+github_username: clinicafatima
+
+# -----------------------------------------------
+# Build Settings & Plugins
+# -----------------------------------------------
+
+# The 'theme' setting tells Jekyll which gem to use for the theme.
+# We are using the gem-based theme configured in your Gemfile.
+
+# Explicitly list ALL required plugins for modern Jekyll 4.
+# This ensures a faster build and prevents silent failures.
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap     # Recommended for SEO, was in Gemfile.
+  - jekyll-seo-tag     # Recommended for SEO, was in Gemfile.
+  - jekyll-paginate    # Required for your pagination setup.
+  - jekyll-postcss-v2
+
+# Timezone setting for accurate date/time rendering (optional, but good practice)
+timezone: America/Guatemala 
+
+# Sass configuration (Uses modern LibSass/Dart Sass via Jekyll 4)
+sass:
+  style: compressed
+  sourcemap: never
+  # sass_dir: _sass # Uncomment if your Sass files are not in the default 'assets/css'
+
+# Markdown configuration (Uses fast CommonMark via 'commonmarker' gem)
+markdown: kramdown
+# kramdown is the default, but we can set specific options for optimization
+kramdown:
+  input: GFM        # Use GitHub Flavored Markdown for compatibility
+  hard_wrap: false
+  # Enable code highlight for fast client-side rendering
+  syntax_highlighter: rouge
+  
+# -----------------------------------------------
+# Exclude from processing
+# -----------------------------------------------
+
+# We remove the commented-out defaults to declutter the file.
+# The `vendor/bundle` and `Gemfile` are now excluded by default in Jekyll 4.
+exclude:
+  - README.md
+  - LICENSE
+  - vendor/
+  - node_modules/ # <- Ensure this is present to exclude node dependencies
+  - package.json    # <- Exclude
+  - package-lock.json # <- Exclude
+  - postcss.config.js # <- Exclude
+  - .stylelintrc.json # <- Exclude
+
+# -----------------------------------------------
+# Permalinks (Optimization)
+# -----------------------------------------------
+
+# Optimizes the URL structure for readability and SEO.
+# Change to the format you prefer (e.g., /:title/ or /:year/:month/:title/)
+permalink: /:title/

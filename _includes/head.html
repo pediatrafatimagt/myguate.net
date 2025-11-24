@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="theme-color" content="#00a5aa"> 
+    <meta name="apple-mobile-web-app-title" content="MyGuate.net">
+
+    <meta name="keywords"        content="pediatra, pediatría, Esquipulas, Chiquimula, Guatemala, salud, enfermedad, vacunas, crecimiento, niño, niña">
+    <meta name="description" content="atención pediátrica, salud de menores">
+    <meta name="author" content="myguate.com">
+    <title>Clín. Pediátr. NSF</title>
+
+    <link rel="canonical" href="https://myguate.net/">
+
+    <link rel="preconnect" href="https://myguate.net">
+    
+    <link rel="preload" href="/assets/fonts/fatima-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fatima-black.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    
+ <!--   <style>
+
+/* fatima */
+@font-face {
+  font-family: 'fatima';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/fatima-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'fatima';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/fatima-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'fatima';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/fatima-bold.woff2') format('woff2');
+}
+
+/* fatima */
+@font-face {
+  font-family: 'fatima';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/assets/fonts/fatima-black.woff2') format('woff2');
+}
+
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #00a5aa;     /* Keep brand teal */
+  --secondary-color:              #007a7e;     /* Darker teal for contrast + hierarchy */
+  --section-bg-color:             #f4f1de;     /* Keep warm neutral */
+  --custom-btn-bg-color:          #007f84;     /* Contrast-safe teal (4.6:1 with white text) */
+  --custom-btn-bg-hover-color:    #e07a5f;     /* Warm hover contrast */
+  --dark-color:                   #252525;     /* Softer black for smoother UI */
+  --p-color:                      #55585c;     /* Slightly darker gray (better contrast on light bg) */
+  --link-hover-color:             #f2cc8f;     /* Keep, but ensure used on dark text/teal bg only */
+
+  --body-font-family:             'fatima', sans-serif;
+
+
+    /* Font sizes — adjusted for readability and responsive scaling */
+  --h1-font-size:                 clamp(2.25rem, 5vw, 2.75rem); /* 36–44px */
+  --h2-font-size:                 clamp(2rem, 4vw, 2.25rem);    /* 32–36px */
+  --h3-font-size:                 clamp(1.75rem, 3.5vw, 2rem);  /* 28–32px */
+  --h4-font-size:                 clamp(1.5rem, 3vw, 1.75rem);  /* 24–28px */
+  --h5-font-size:                 clamp(1.25rem, 2.5vw, 1.5rem);/* 20–24px */
+  --h6-font-size:                 clamp(1.125rem, 2vw, 1.375rem);/* 18–22px */
+  --p-font-size:                  1.125rem; /* 18px — perfect for readability */
+  --menu-font-size:               1rem;     /* 16px — minimum for accessibility */
+  --btn-font-size:                0.9375rem;/* 15px — better legibility on buttons */
+
+  /* Border radius — slightly softened for modern, touch-friendly design */
+  --border-radius-large:          2.5rem;   /* 40px — rounded but not exaggerated */
+  --border-radius-medium:         1rem;     /* 16px — typical for cards/buttons */
+  --border-radius-small:          0.5rem;   /* 8px — subtle softening */
+
+  /* Font weights — maintain visual hierarchy and clarity */
+  --font-weight-normal:           400;
+  --font-weight-medium:           600; /* increased for better contrast on mid tones */
+  --font-weight-bold:             700;
+}
+
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family);
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6; /* improves reading comfort */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*---------------------------------------
+  TYPOGRAPHY — ACCESSIBLE + CONSISTENT               
+-----------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-color);
+  letter-spacing: -0.5px; /* reduced for better readability on large text */
+  line-height: 1.25; /* improved vertical rhythm */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15; /* tighter but readable */
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase; /* optional, improves distinction */
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.7; /* optimal for long text */
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.7;
+  margin: 0 0 1em 1.5em; /* improves readability */
+}
+
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+
+    </style> -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/fatima.css" rel="stylesheet">
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+    <!-- SEO -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "MedicalClinic",
+            "name": "Clínica Pediátrica Ntra. Sra. de Fátima",
+            "url": "https://myguate.net",
+            "logo": "https://myguate.net/images/logo.webp",
+            "image": "https://myguate.net/images/logo.webp",
+            "sameAs": [
+                "https://www.facebook.com/nuestrafatima/",
+                "https://twitter.com/myguate_fatima"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "2 avenida 7-21 z. 1, San Mateo 2",
+                "addressLocality": "Ciudad de Esquipulas",
+                "addressRegion": "Chiquimula",
+                "postalCode": "20007",
+                "addressCountry": "GT"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "14.567778",
+                "longitude": "-89.346611"
+            },
+            "contactPoint": [
+                {
+                "@type": "ContactPoint",
+                "telephone": "+502-4183-5663",
+                "contactType": "customer support",
+                "email": "clinicafatima@myguate.net",
+                "areaServed": "GT",
+                "availableLanguage": ["es", "en"]
+                }
+            ]
+            },
+            {
+            "@type": "WebSite",
+            "url": "https://myguate.net",
+            "name": "Clínica Pediátrica Ntra. Sra. de Fátima",
+            "inLanguage": "es",
+            "audience": {
+                "@type": "Audience",
+                "audienceType": [
+                "Health Care Providers",
+                "Parents",
+                "General Public",
+                "Scientists"
+                ],
+                "geographicArea": {
+                "@type": "Country",
+                "name": "Guatemala"
+                }
+            },
+            "hasPart": [
+                {
+                "@type": "SiteNavigationElement",
+                "name": "Physician/Pediatrician Dr. Perera",
+                "url": "https://myguate.net/#section_2"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "Nuestros Servicios",
+                "url": "https://myguate.net/#section_3"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "Recursos",
+                "url": "https://myguate.net/#section_4"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "Programa",
+                "url": "https://myguate.net/salud/event-listing.html"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "FAQ - Preguntas y Respuestas",
+                "url": "https://myguate.net/salud/preguntas_y_respuestas.html"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "FAQ - Preguntas y Respuestas",
+                "url": "https://myguate.net/salud/cydInfantil.html"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "FAQ - Preguntas y Respuestas",
+                "url": "https://myguate.net/salud/tecnica_lactancia_materna.html"
+                },
+                {
+                "@type": "SiteNavigationElement",
+                "name": "Detalles",
+                "url": "https://myguate.net/salud/event-detail.html"
+                }
+            ]
+            }
+        ]
+        }
+        </script>
+    
+    
+</head>
