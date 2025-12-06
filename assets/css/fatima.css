@@ -45,65 +45,6 @@ https://templatemo.com/tm-587-tiya-golf-club
   --font-weight-bold:             700;
 }
 
-/* ---------------------------------------
-  TYPOGRAPHY               
------------------------------------------ */
-/*
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--dark-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--font-weight-medium);
-  letter-spacing: -1px;
-}
-
-h1 {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-weight-bold);
-}
-
-h2 {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-weight-bold);
-}
-
-h3 {
-  font-size: var(--h3-font-size);
-}
-
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
-h6 {
-  font-size: var(--h6-font-size);
-}
-
-p {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}
-
-ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}*/
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
@@ -181,7 +122,6 @@ ul li, ol li {
   margin-bottom: 0.5em;
 }
 
-
 a, 
 button {
   touch-action: manipulation;
@@ -203,6 +143,13 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+/* ---------------------------------------
+  HEADER               
+----------------------------------------- */
+header {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
 
 /* ---------------------------------------
   SECTION               
@@ -267,6 +214,7 @@ strong {
   -moz-perspective: 300px;
   perspective: 300px;
 }
+
 .cd-headline.rotate-1 b {
   opacity: 0;
   -webkit-transform-origin: 50% 100%;
@@ -280,6 +228,7 @@ strong {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
+
 .cd-headline.rotate-1 b.is-visible {
   opacity: 1;
   -webkit-transform: rotateX(0deg);
@@ -291,6 +240,7 @@ strong {
   -moz-animation: cd-rotate-1-in 1.2s;
   animation: cd-rotate-1-in 1.2s;
 }
+
 .cd-headline.rotate-1 b.is-hidden {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -307,35 +257,43 @@ strong {
     -webkit-transform: rotateX(180deg);
     opacity: 0;
   }
+
   35% {
     -webkit-transform: rotateX(120deg);
     opacity: 0;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -webkit-transform: rotateX(360deg);
     opacity: 1;
   }
 }
+
 @-moz-keyframes cd-rotate-1-in {
   0% {
     -moz-transform: rotateX(180deg);
     opacity: 0;
   }
+
   35% {
     -moz-transform: rotateX(120deg);
     opacity: 0;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -moz-transform: rotateX(360deg);
     opacity: 1;
   }
 }
+
 @keyframes cd-rotate-1-in {
   0% {
     -webkit-transform: rotateX(180deg);
@@ -345,6 +303,7 @@ strong {
     transform: rotateX(180deg);
     opacity: 0;
   }
+
   35% {
     -webkit-transform: rotateX(120deg);
     -moz-transform: rotateX(120deg);
@@ -353,9 +312,11 @@ strong {
     transform: rotateX(120deg);
     opacity: 0;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -webkit-transform: rotateX(360deg);
     -moz-transform: rotateX(360deg);
@@ -365,40 +326,50 @@ strong {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes cd-rotate-1-out {
   0% {
     -webkit-transform: rotateX(0deg);
     opacity: 1;
   }
+
   35% {
     -webkit-transform: rotateX(-40deg);
     opacity: 1;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -webkit-transform: rotateX(180deg);
     opacity: 0;
   }
 }
+
 @-moz-keyframes cd-rotate-1-out {
   0% {
     -moz-transform: rotateX(0deg);
     opacity: 1;
   }
+
   35% {
     -moz-transform: rotateX(-40deg);
     opacity: 1;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -moz-transform: rotateX(180deg);
     opacity: 0;
   }
+
 }
+
 @keyframes cd-rotate-1-out {
   0% {
     -webkit-transform: rotateX(0deg);
@@ -408,6 +379,7 @@ strong {
     transform: rotateX(0deg);
     opacity: 1;
   }
+
   35% {
     -webkit-transform: rotateX(-40deg);
     -moz-transform: rotateX(-40deg);
@@ -416,9 +388,11 @@ strong {
     transform: rotateX(-40deg);
     opacity: 1;
   }
+
   65% {
     opacity: 0;
   }
+
   100% {
     -webkit-transform: rotateX(180deg);
     -moz-transform: rotateX(180deg);
@@ -677,11 +651,13 @@ div > a.phone-cta-btn {
   height: 300px;
   max-height: 400px;
 }
+
 @media (min-width: 768px) {
   .chart-container {
       height: 350px;
   }
 }
+
 .flowchart-step {
   position: relative;
   padding: 1rem 1.5rem;
@@ -691,6 +667,7 @@ div > a.phone-cta-btn {
   text-align: center;
   flex-grow: 1;
 }
+
 .flowchart-connector {
   display: flex;
   align-items: center;
@@ -700,6 +677,7 @@ div > a.phone-cta-btn {
   font-weight: bold;
   padding: 0 1rem;
 }
+
 .position-card {
   background: white;
   border-radius: 0.75rem;
@@ -708,6 +686,7 @@ div > a.phone-cta-btn {
   display: flex;
   flex-direction: column;
 }
+
 .position-illustration {
   background-color: var(--primary-color);
   height: 150px;
@@ -715,9 +694,11 @@ div > a.phone-cta-btn {
   align-items: center;
   justify-content: center;
 }
+
 .position-text {
   padding: 1.5rem;
 }
+
 .icon-placeholder {
   font-size: 4rem;
   color: #073B4C;
@@ -733,9 +714,11 @@ div > a.phone-cta-btn {
   border-radius: 10px 10px 0 0;
   padding: 1rem 1.25rem;
 }
+
 iframe {
     border: none; /* This replaces frameborder="0" */
 }
+
 /* ---------------------------------------
   NAVIGATION BAR & OFFCANVAS              
 ----------------------------------------- */
@@ -1340,16 +1323,6 @@ iframe {
   position: relative;
 }
 
-/* .contact-info-item {
- background: var(--secondary-color);
-  border-radius: var(--border-radius-medium);
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}*/
 
 .contact-info-body {
   padding: 20px 30px;
